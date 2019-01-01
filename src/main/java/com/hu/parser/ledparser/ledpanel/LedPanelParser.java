@@ -1,4 +1,4 @@
-package com.hu.parser.ledpanel;
+package com.hu.parser.ledparser.ledpanel;
 
 public class LedPanelParser {
 	
