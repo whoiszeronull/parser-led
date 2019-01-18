@@ -96,6 +96,6 @@
 		information or not. This is more like verifier chain that will run thru all 
 		the verifiers -->
 	<verifiers>
-		<verifier type="com.hu.parser.ledparser.verifier.impl.HtmlTableSpecsVerifier"></verifier>
+		<verifier type="com.hu.parser.ledparser.verifier.impl.HtmlTableSpecsVerifier">com.hu.parser.ledparser.verifier.impl.HtmlTableSpecsVerifier</verifier>
 	</verifiers>
 </configuration>

@@ -23,12 +23,12 @@ public class HtmlTableSpecsVerifier implements Verifier {
 		return false;
 	}
 
-	public List<Verifier> getVerifiers() {
+	public List<String> getVerifiers() {
 		Configurations configs = new Configurations();
 		XMLConfiguration config;
 		try {
 			config = configs.xml("./config/parser-config.xml");
-			return config.getList(Verifier.class, "verifiers.verifier");
+			return config.getList(String.class, "verifiers.verifier");
 			
 		} catch (ConfigurationException e) {
 			throw new RuntimeException(e);
