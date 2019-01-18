@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<parser-config>
+<configuration>
 
 	<!-- The specifications of the product -->
 	<specs type="com.hu.parser.ledparser.vo.LedPanel">
@@ -96,6 +96,6 @@
 		information or not. This is more like verifier chain that will run thru all 
 		the verifiers -->
 	<verifiers>
-		<verifier type="HtmlTableSpecs"></verifier>
+		<verifier type="com.hu.parser.ledparser.verifier.impl.HtmlTableSpecsVerifier"></verifier>
 	</verifiers>
-</parser-config>
+</configuration>
