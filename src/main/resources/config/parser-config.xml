@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<parser-config>
+
+	<!-- The specifications of the product -->
+	<specs type="com.hu.parser.ledparser.vo.LedPanel">
+		<spec name="pitch" required="true">
+		<!-- the search ke words are separated by english comma ",", not the chinese comma “，” , so please beware -->
+			<search-key-word>pitch, 间距, 点间距</search-key-word>
+		</spec>
+		<spec name="model">
+			<search-key-word>model, 型号</search-key-word>
+		</spec>
+		<spec name="brightness">
+			<search-key-word>brightness, 亮度</search-key-word>
+		</spec>
+		<spec name="refreshRate">
+			<search-key-word>refresh rate, 刷新, 刷新率</search-key-word>
+		</spec>
+		<spec name="pixelComposition">
+			<search-key-word></search-key-word>
+		</spec>  
+		<spec name="panelDimension">
+			<search-key-word>panel dimension, 箱体尺寸</search-key-word>
+		</spec>
+		<spec name="verticalViewingAngle">
+			<search-key-word>vertical viewing angle, 竖直视角</search-key-word>
+		</spec>
+		<spec name="horizontalViewingAngle">
+			<search-key-word>horizontal viewing angle, 水平视角</search-key-word>
+		</spec>
+		<spec name="panelWeight">
+			<search-key-word>panel weight, 箱体重量</search-key-word>
+		</spec>
+		<spec name="application">
+			<search-key-word>application, 用途</search-key-word>
+		</spec>
+		<spec name="ipRating">
+			<search-key-word>IP, </search-key-word>
+		</spec>
+		<spec name="grayScale">
+			<search-key-word>gray scale, 灰度</search-key-word>
+		</spec>
+		<spec name="panelWResolution">
+			<search-key-word>箱体水平像素点数</search-key-word>
+		</spec>
+		<spec name="panelHResolution">
+			<search-key-word>箱体竖直像素点数</search-key-word>
+		</spec>
+		<spec name="panelResolution">
+			<search-key-word>panel resolution, 箱体分辨率</search-key-word>
+		</spec>
+		<spec name="tileWeight">
+			<search-key-word></search-key-word>
+		</spec>
+		<spec name="tileWResolution">
+			<search-key-word></search-key-word>
+		</spec>
+		<spec name="tileHResolution">
+			<search-key-word></search-key-word>
+		</spec>
+		<spec name="panelMaterial">
+			<search-key-word></search-key-word>
+		</spec>
+		<spec name="panelFlatness">
+			<search-key-word></search-key-word>
+		</spec>
+		<spec name="calibration">
+			<search-key-word></search-key-word>
+		</spec>
+		<spec name="colorTemperature">
+			<search-key-word></search-key-word>
+		</spec>
+		<spec name="contrast">
+			<search-key-word></search-key-word>
+		</spec>
+		<spec name="powerConsumption">
+			<search-key-word></search-key-word>
+		</spec>
+		<spec name="maintenance">
+			<search-key-word></search-key-word>
+		</spec>
+		<spec name="certification">
+			<search-key-word></search-key-word>
+		</spec>
+		<spec name="operatingTemperature">
+			<search-key-word></search-key-word>
+		</spec>
+		<spec name="operatingRH">
+			<search-key-word></search-key-word>
+		</spec>
+
+	</specs>
+
+	<!-- The vertfiers to determin the content(string) having required product 
+		information or not. This is more like verifier chain that will run thru all 
+		the verifiers -->
+	<verifiers>
+		<verifier type="HtmlTableSpecs"></verifier>
+	</verifiers>
+</parser-config>

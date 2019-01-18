@@ -1,0 +1,737 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="renderer" content="webkit">
+    <title>CR系列小间距_LED显示屏,LED电视墙|LED应用领域杰出公司-艾比森</title>
+    <meta name="keywords" content="CR系列,深圳led小间距,高清小间距,小间距显示屏" />
+    <meta name="description" content="CR系列小间距LED可以显示更高清晰度的图形图像和视频,CR小间距LED更多路的视频和图像画面,尤其是在图像拼接方面的运用,CR小间距LED可以做到无缝和任意大面积拼接。" />
+	<link rel="stylesheet" href="/templets/default/css/global.css">
+	<link rel="stylesheet" href="/templets/default/css/layout.css">
+	<script src="/templets/default/js/jquery-1.11.2.min.js"></script>
+	<script src="/templets/default/js/global.js"></script>
+	<!--[if IE]>
+		<script type="text/javascript" src="/templets/default/js/html5.js"></script>
+	<![endif]-->
+	<!--[if IE 6]>
+		<script type="text/javascript" src="/templets/default/js/DD_belatedPNG_0.0.8a.min.js"></script>
+		<script>
+			DD_belatedPNG.fix('*');
+		</script>
+	<![endif]-->
+	<script>
+	$(document).ready(function(){
+		$('#get_top').on('click', function(){
+	        var iTop = $('.pro_sub').offset().top;
+	        $('html,body').stop().animate({scrollTop:525});
+	    })
+
+	    //------应用视频弹出
+		$('#yingyong_video_cut').on('click', function(){
+			$('.yingyong_video').slideDown();
+		})
+		$('.video_no').on('click',function(){
+			$('.yingyong_video').slideUp();
+		})
+
+		//------产品视频弹出
+		$('#pro_video_cut').on('click', function(){
+			$('.pro_video').slideDown();
+		})
+		$('.video_no').on('click',function(){
+			$('.pro_video').slideUp();
+		})
+		
+		var article_id = $("#article_id").text(); //获取文章id
+		//alert(article_id);
+		$.ajax({
+		//相关产品ajax
+			url: '/php/ajax_xgcp.php?article_id=' + article_id,
+			success:function(msg){
+				$(".pro_list").html(msg);
+				
+			}
+		})
+		
+		$.ajax({
+		//成功案例相关文章ajax
+			url: '/php/ajax_cgal.php?article_id=' + article_id,
+			success:function(msg){
+				$(".case").html(msg);
+				
+			}
+		})
+		$.ajax({
+		//栏目banner图ajax
+			url: '/php/ajax_banner_chanpin.php?article_id=' + article_id,
+			success:function(msg){
+				var msg = "url("+msg+") no-repeat center top";
+				//$(".con_banner").html(msg);
+				$(".pro_banner").css({'background':msg});
+			}
+		})
+	})
+	</script>
+</head>
+<body>
+	<div style="display:none;" id="article_id">749 </div>
+	<section class="pro_video" id="video">
+		<div>
+			<!--<video width="1000" height="500" src=""></video>-->
+			<iframe  src="http://player.youku.com/embed/XMjg2NTY1MjU0MA==" quality="high" width="1000" height="500" align="middle" allowScriptAccess="always" allowFullScreen="true" mode="transparent" type="application/x-shockwave-flash"></iframe>
+            <!--
+			<embed src="http://player.youku.com/embed/XMjg2NTY1MjU0MA==" quality="high" width="1000" height="500" align="middle" allowScriptAccess="always" allowFullScreen="true" mode="transparent" type="application/x-shockwave-flash"></embed>
+			-->
+			<i class="video_no" id="video_no"></i>
+		</div>
+		<b></b>
+	</section>
+	<section class="yingyong_video" id="video">
+		<div>
+			<!--<video width="1000" height="500" src="http://v.youku.com/v_show/id_XMTM1MjEyNjA5Mg==.html?f=26121978"></video>-->
+			<iframe  src="http://player.youku.com/embed/XMjg2NTY1Njg0MA==" quality="high" width="1000" height="500" align="middle" allowScriptAccess="always" allowFullScreen="true" mode="transparent" type="application/x-shockwave-flash"></iframe>
+  <!--         
+		   <embed src="http://player.youku.com/embed/XMjg2NTY1Njg0MA==" quality="high" width="1000" height="500" align="middle" allowScriptAccess="always" allowFullScreen="true" mode="transparent" type="application/x-shockwave-flash"></embed>
+-->
+		   <i class="video_no" id="video_no"></i>
+		</div>
+		<b></b>
+	</section>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?0d9e0b8e1b09a00e26e232010af7875d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script type="text/javascript" src="http://www.cubead.cn:7070/recv/visit.do?tenantid=275880&site=www.absen.cn"></script>
+<script type="text/javascript" language="javascript" src="http://ca.cubead.com/cubead_ca.js"></script><script type="text/javascript"> _traker._init('www.absen.cn','275880'); 
+</script>
+
+
+<meta baidu-gxt-verify-token="76f845ab82f23e76d7adf83c078b1585">
+	<!-- <a id="get_kf" title="小蜜蜂在线客服" target="_black" href="http://p.qiao.baidu.com/cps/chat?siteId=11693946&userId=25108294"></a> -->
+    <a id="get_top" href="javascript:;"></a>
+	<header id="header">
+		<section id="top_info">
+			<div class="top_info">
+				<article>
+					<button id="shortcut_but">快捷入口<img src="/templets/default/img/info05.png" alt=""></button>
+					<i>400-700-3278</i>
+				</article>
+				<summary>
+					<aside><a href="http://i.youku.com/szabsen" target="_blank"></a><a class="weixin" href="javascript:;"><b><img src="/templets/default/img/abs_wx.jpg">艾比森官方微信</b></a><a class="weibo" href="http://weibo.com/szabsen" target="_blank"></a></aside>
+					<div id="surname">
+						LANGUAGE
+						<p>
+							<a href="http://www.absen.cn/">
+                                    中文简体</a>                            
+                            <a href="http://www.absen.com/">
+                                English</a>
+                            <a href="http://www.usabsen.com/">
+                                North America</a>
+                            <!--<a href="http://www.absen.co.kr/">
+                                한국어</a> -->
+                            <a href="http://www.szabsen.ru">
+                                Русский</a>
+                            <a href="http://www.absen.jp/">
+                                日本語</a>
+                            <a href="http://www.absen.mx/">
+                                Español</a>
+                            <a href="https://www.absen-europe.com/">
+                                Deutsch</a>
+                            <a href="http://fr.absen.com/">
+                                Français</a>
+                            <a href="https://www.absen.com.br/">
+                                Português</a>
+						</p>
+					</div>
+				</summary>
+			</div>
+		</section>
+		
+		<section class="header_con">
+			<h1><a href="/" id="logo"><img src="/templets/default/img/logo.jpg" alt="LED显示屏龙头企业艾比森官方LOGO"></a></h1>
+			<div class="fr">
+				<nav id="nav">
+					<ul>
+						<li>
+							<a href="/list-6.html">行业应用</a>
+							<div>
+								<figure>
+									<dl>
+										<dt>行业应用</dt>
+                                         
+                                        <dd><a href="/list-36.html">控制室</a></dd>
+                                         
+                                        <dd><a href="/list-35.html">企业零售</a></dd>
+                                         
+                                        <dd><a href="/list-15.html">地产</a></dd>
+                                         
+                                        <dd><a href="/list-11.html">户外传媒</a></dd>
+                                         
+                                        <dd><a href="/list-28.html">交通媒体</a></dd>
+                                         
+                                        <dd><a href="/list-152.html">公共综合服务</a></dd>
+                                         
+                                        <dd><a href="/list-34.html">舞台租赁</a></dd>
+                                         
+                                        <dd><a href="/list-20.html">体育</a></dd>
+                                         
+                                        <dd><a href="/list-37.html">智慧城市</a></dd>
+                                        
+									</dl>
+									<article>
+										<picture><img src="/templets/default/img/nev.jpg" width="360" height="170"></picture>
+<aside>专注LED显示领域</aside>
+									</article>
+								</figure>
+							</div>
+					  </li>
+						
+
+
+
+
+
+
+
+							<li><a href="/list-7.html">产品中心</a>
+							<div>
+								<figure class="navpro">									
+                                    <dl>
+										<dt>产品中心</dt>
+										<dd>
+                                        	<a href="/list-78.html">户内全彩</a>
+                                        	<span>                                            
+                                            <a href="/view-242.html">户内平板N系列</a>
+<a href="/view-240.html">户内固装K系列</a>
+<a href="/view-674.html">户内固装H3</a>
+
+                                        	</span>
+                                        </dd><dd>
+                                        	<a href="/list-84.html">小间距</a>
+                                        	<span>                                            
+                                            <a href="/view-180.html">A27系列小间距</a>
+<a href="/view-749.html">CR系列小间距</a>
+<a href="/view-930.html">iCon会议解决方案</a>
+<a href="/view-606.html">HDV系列</a>
+
+                                        	</span>
+                                        </dd><dd>
+                                        	<a href="/list-163.html">户外全彩</a>
+                                        	<span>                                            
+                                            <a href="/view-27.html">户外A1699</a>
+<a href="/view-237.html">户外固装C15</a>
+<a href="/view-591.html">户外XD系列</a>
+<a href="/view-241.html">户外固装L系列</a>
+
+                                        	</span>
+                                        </dd><dd>
+                                        	<a href="/list-81.html">租赁</a>
+                                        	<span>                                            
+                                            <a href="/view-236.html">球场屏A97V1</a>
+<a href="/view-235.html">租赁屏DV系列</a>
+
+                                        	</span>
+                                        </dd>
+									</dl>
+									<!-- <article>
+										<picture><img src="/templets/default/img/nav03.png" width="360" height="170"></picture>
+<aside>产品中心广告位</aside>
+									</article> -->
+								</figure>
+							</div>
+					  </li>
+
+
+
+
+						<li>
+							<a href="/led-display-project.html">成功案例</a>
+							<div>
+								<figure>
+									<dl>
+										<dt>成功案例</dt>
+                                         
+                                        <dd><a href="/led-display-project.html">广告传媒</a></dd>
+                                         
+                                        <dd><a href="/led-display-project.html">舞台租赁</a></dd>
+                                         
+                                        <dd><a href="/led-display-project.html">体育场馆</a></dd>
+                                         
+                                        <dd><a href="/led-display-project.html">市政工程</a></dd>
+                                         
+                                        <dd><a href="/led-display-project.html">商业地产</a></dd>
+                                         
+                                        <dd><a href="/led-display-project.html">会议展览</a></dd>
+                                         
+                                        <dd><a href="/led-display-project.html">广电项目</a></dd>
+                                         
+                                        <dd><a href="/led-display-project.html">交通媒体</a></dd>
+                                         
+                                        <dd><a href="/led-display-project.html">智慧城市</a></dd>
+                                        
+									</dl>
+									<article>
+										<picture><img src="/templets/default/img/nev.jpg" width="360" height="170"></picture>
+<aside>专注LED显示领域</aside>
+									</article>
+								</figure>
+							</div>
+					  </li>
+
+
+
+
+						
+							<li><a href="/list-1.html">新闻资讯</a>
+							<div>
+								<figure>
+									<dl>
+										<dt>新闻资讯</dt>
+										 
+                                        <dd><a href="/list-2.html">公司新闻</a></dd>
+                                         
+                                        <dd><a href="/list-3.html">行业动态</a></dd>
+                                         
+                                        <dd><a href="/list-5.html">活动专题</a></dd>
+                                        
+									</dl>
+									<article>
+										<picture><img src="/uploads/181206/2-1Q206113A4G9.jpg" width="360" height="170"></picture>
+<aside><a href="http://www.absen.cn/view-1299.html">诚邀您参加艾比森2019年广州ISLE展</a></aside>
+									</article>
+								</figure>
+							</div>
+					  </li>
+
+
+
+
+						<li>
+							<a href="/list-8.html">服务支持</a>
+							<div>
+								<figure>
+									<dl>
+										<dt>服务支持</dt>
+										 
+                                        <dd><a href="/list-42.html">服务</a></dd>
+                                         
+                                        <dd><a href="/list-48.html">在线资源</a></dd>
+                                        
+									</dl>
+									<article>
+										<picture><img src="/uploads/181106/2-1Q106111110L4.jpg" width="360" height="170"></picture>
+<aside>售后服务电话：400-700-3278 转 3号线</aside>
+									</article>
+								</figure>
+							</div>
+					  </li>
+						<li>
+							<a href="/list-9.html">投资者关系</a>
+							<div>
+								<figure>
+									<dl>
+										<dt>投资者关系</dt>
+                                         <dd><a href="http://www.cninfo.com.cn/information/companyinfo.html?fulltext?szcn300389" rel="nofollow" target="_blank">公司公告</a></dd>
+                                         <dd><a href="http://irm.cninfo.com.cn/ssessgs/S300389/index.html" rel="nofollow" target="_blank">互动平台</a></dd>
+                                         <dd><a href="/list-60.html">投资者热线</a></dd>
+									</dl>
+									<article>
+										<picture><img src="/templets/default/img/touzizhe.jpg" width="360" height="170"></picture>
+<aside>股票代码：300389</aside>
+									</article>
+								</figure>
+							</div>
+					  </li>
+						<li>
+							<a href="/list-10.html">关于艾比森</a>
+							<div>
+								<figure>
+									<dl>
+										<dt>关于艾比森</dt>
+										 
+                                        <dd><a href="/list-61.html">公司简介</a></dd>
+                                         
+                                        <dd><a href="/list-62.html">业务&分支</a></dd>
+                                         
+                                        <dd><a href="/list-63.html">荣誉资质</a></dd>
+                                         
+                                        <dd><a href="/list-66.html">大事记</a></dd>
+                                         
+                                        <dd><a href="/list-95.html">公司期刊</a></dd>
+                                         
+                                        <dd><a href="/list-70.html">人力资源</a></dd>
+                                         
+                                        <dd><a href="/list-77.html">联系我们</a></dd>
+                                        
+									</dl>
+									<article>
+										<picture><img src="/templets/default/img/nev.jpg" width="360" height="170"></picture>
+<aside>专注于LED显示屏业务</aside>
+									</article>
+								</figure>
+							</div>
+						</li>
+					</ul>
+				</nav>
+				<div id="search">
+					<div class="search_i">
+                    <script language="javascript" type="text/javascript">
+						$(function(){
+							$('#search-keyword').bind('keypress');
+						});
+					</script>
+                    <form  name="formsearch" action="/plus/search.php">
+                    <input name="q" type="text" class="search-keyword" id="search-keyword" value="在这里搜索..." onfocus="if(this.value=='在这里搜索...'){this.value='';}"  onblur="if(this.value==''){this.value='在这里搜索...';}" />
+           <select style="display:none" name="searchtype" class="search-option" id="search-option">
+               <option  value="title" selected='1'>检索标题</option>
+               <option  value="titlekeyword">智能模糊</option>
+           </select>
+                    </form>
+			        </div>
+				</div>
+			</div>
+		</section>
+
+		<section id="shortcut">
+			<div class="shortcut_con">
+				<dl>
+					<dt class="abs">了解艾比森</dt>
+					<dd><a href="/list-6.html">了解解决方案</a></dd>
+					<dd><a href="/list-7.html">了解产品</a></dd>
+					<dd><a href="/list-5.html">参加展会活动</a></dd>
+					<dd><a href="/list-49.html">专业培训与认证</a></dd>
+				</dl>
+				<dl>
+					<dt class="advisory">购买咨询</dt>
+					<dd><a href="/list-77.html">询价购买</a></dd>
+					<dd><a href="/list-77.html">查找经销商</a></dd>
+					<dd><a href="/list-77.html#map">联系本地办事处</a></dd>
+				</dl>
+				<dl>
+					<dt class="serve">自助服务</dt>
+					<dd><a href="/list-46.html">下载技术文档</a></dd>
+					<dd><a href="http://www.absen.cn/contactus.html">提交问题单</a></dd>
+					<dd><a href="http://www.absen.cn/contactus.html">配置报价</a></dd>
+					<dd><a href="http://www.absen.cn/contactus.html">快速服务</a></dd>
+					<dd><a href="http://absen.hotjob.cn/wt/absen/web/index/social" target="_blank" rel="nofollow" >加入艾比森</a></dd>
+				</dl>
+				<dl>
+					<dt class="iam">我是...</dt>
+					<dd class="iam_01"><a href="">行业客户</a></dd>
+					<dd class="iam_02"><a href="/list-8.html">用户服务</a></dd>
+					<dd class="iam_03"><a href="/list-7.html">渠道合作伙伴</a></dd>
+					<dd class="iam_04"><a href="/gys/provider.html">供应商</a></dd>
+					<dd class="iam_05"><a href="/list-9.html">投资者</a></dd>
+					<dd class="iam_06"><a href="ttp://absen.hotjob.cn/wt/absen/web/index/social" target="_blank" rel="nofollow" >应聘者</a></dd>
+				</dl>
+			</div>
+		</section>
+	</header>
+	<section class="pro_banner">
+		<div class="">
+			<h2>CR系列小间距</h2>
+			<aside>CR1.2/ CR1.5/ CR1.9</aside>
+			
+		<!--	<a id="download1" href="/uploads/soft/170809/2-1FP9140405.pdf">下载产品参数</a> -->
+			<a id="pro_video_cut" href="javascript:;">观看产品视频</a>
+		<!--	<a id="yingyong_video_cut" href="javascript:;">观看应用视频</a> -->
+			
+		</div>
+	</section>
+
+	<section class="wrap_bai">
+		<div class="pro_sub">
+			<i></i>
+			<ul id="ul_tab">
+				<li class="act"><a href="javascript:chanpn_tab(0,'xlgs');">系列概述</a></li>
+                <li><a href="javascript:chanpn_tab(1,'xlcs');">系列参数</a></li>
+                <li><a href="javascript:chanpn_tab(2,'xgcp');">相关产品</a></li>
+                <li><a href="javascript:chanpn_tab(3,'cgal');">成功案例</a></li>
+			</ul>
+		</div>
+	</section>
+    <script>
+	$(document).ready(function(){
+		var download_url = $("#download1").attr('href');
+		$("#xlcs").find('a').eq(0).attr('href',download_url);
+	})
+	function chanpn_tab(i,div_id){
+		$(".chanpin").hide();
+		$("#"+div_id).show();
+		$("#ul_tab li").removeClass("act");
+		$("#ul_tab li").eq(i).addClass("act");
+	}
+	</script>
+<div id="xlgs" class="chanpin">
+<!--系列概述开始-->
+	<p style="text-align:center">
+	<img alt="小间距LED" src="/uploads/allimg/170731/2-1FI11JS1J2.jpg" /></p>
+
+<!--系列概述结束-->
+</div>
+<!--系列参数开始-->
+<div id="xlcs" class="chanpin" style="display:none;">
+<section class="news_box">
+	<table class="param_table">
+		<thead>
+			<tr>
+				<td>
+					&nbsp;</td>
+				<td>
+					CR1.2</td>
+				<td>
+					CR1.5</td>
+				<td>
+					CR1.9</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					像素间距</td>
+				<td>
+					1.2毫米</td>
+				<td>
+					1.5毫米</td>
+				<td>
+					1.9毫米</td>
+			</tr>
+			<tr>
+				<td>
+					模组尺寸</td>
+				<td>
+					152.5X171.5毫米</td>
+				<td>
+					152.5X171.5毫米</td>
+				<td>
+					152.5X171.5毫米</td>
+			</tr>
+			<tr>
+				<td>
+					箱体尺寸</td>
+				<td>
+					610X343X67毫米</td>
+				<td>
+					610X343X67毫米</td>
+				<td>
+					610X343X67毫米</td>
+			</tr>
+			<tr>
+				<td>
+					箱体重量</td>
+				<td>
+					6千克/单元</td>
+				<td>
+					6千克/单元</td>
+				<td>
+					6千克/单元</td>
+			</tr>
+			<tr>
+				<td>
+					灰度等级</td>
+				<td>
+					16384</td>
+				<td>
+					16384</td>
+				<td>
+					16384</td>
+			</tr>
+			<tr>
+				<td>
+					刷新频率</td>
+				<td>
+					3840&nbsp;赫兹</td>
+				<td>
+					3840赫兹</td>
+				<td>
+					3840赫兹</td>
+			</tr>
+			<tr>
+				<td>
+					亮度</td>
+				<td>
+					600尼特</td>
+				<td>
+					650尼特</td>
+				<td>
+					800尼特</td>
+			</tr>
+			<tr>
+				<td>
+					水平视角</td>
+				<td>
+					160度</td>
+				<td>
+					160度</td>
+				<td>
+					160度</td>
+			</tr>
+			<tr>
+				<td>
+					垂直视角</td>
+				<td>
+					140度</td>
+				<td>
+					140度</td>
+				<td>
+					150度</td>
+			</tr>
+			<tr>
+				<td>
+					功率</td>
+				<td>
+					610/203&nbsp;W/平米&nbsp;</td>
+				<td>
+					610/203&nbsp;W/平米</td>
+				<td>
+					610/203&nbsp;W/平米</td>
+			</tr>
+			<tr>
+				<td>
+					防护等级</td>
+				<td>
+					IP40/IP21</td>
+				<td>
+					IP40/IP21</td>
+				<td>
+					IP40/IP21</td>
+			</tr>
+			<tr>
+				<td>
+					产品使用寿命</td>
+				<td>
+					100000小时&nbsp;</td>
+				<td>
+					100000小时</td>
+				<td>
+					100000小时</td>
+			</tr>
+			<tr>
+				<td colspan="4" style="text-align: center;">
+					<a href="/uploads/soft/161219/2_1046049861.pdf"><span style="color:#ff8c00;">下载参数</span></a></td>
+			</tr>
+		</tbody>
+	</table>
+</section>
+<br />
+<br />
+
+<!--系列参数结束-->
+</div>
+<!--相关产品开始-->
+<div id="xgcp" class="chanpin" style="display:none;">
+<section class="wrap">
+		<ul class="pro_list margin">
+
+		</ul>
+	</section>
+</div>
+<!--相关产品结束-->
+<!--成功案例开始-->
+<div id="cgal" class="chanpin" style="display:none;">
+<section class="wrap">
+		<ul class="case margin">
+			
+		
+		</ul>
+	</section>
+</div>
+<!--成功案例结束-->
+	<footer>
+		<section class="foot_list">
+			<dl>
+				<dt>关于艾比森</dt>
+				<dd><i>·</i><a href="/list-61.html">公司简介</a></dd>
+                 
+                <dd><i>·</i><a href="/list-62.html">业务&分支</a></dd>
+                 
+                <dd><i>·</i><a href="/list-63.html">荣誉资质</a></dd>
+                 
+                <dd><i>·</i><a href="/list-77.html">联系我们</a></dd>
+			</dl>
+			<dl>
+				<dt>产品中心</dt>
+                 
+                <dd><i>·</i><a href="/list-78.html">户内全彩</a></dd>
+                 
+                <dd><i>·</i><a href="/list-84.html">小间距</a></dd>
+                 
+                <dd><i>·</i><a href="/list-163.html">户外全彩</a></dd>
+                 
+                <dd><i>·</i><a href="/list-81.html">租赁</a></dd>
+                
+			</dl>
+			<dl>
+				<dt>新闻资讯</dt>
+				 
+                <dd><i>·</i><a href="/list-2.html">公司新闻</a></dd>
+                 
+                <dd><i>·</i><a href="/list-3.html">行业动态</a></dd>
+                 
+                <dd><i>·</i><a href="/list-5.html">活动专题</a></dd>
+                
+			</dl>
+			<dl>
+				<dt>投资者关系</dt>
+				 
+                <dd><i>·</i><a href="/list-60.html">投资者热线</a></dd>
+                 
+                <dd><i>·</i><a href="/list-59.html">互动平台</a></dd>
+                 
+                <dd><i>·</i><a href="/list-58.html">公司公告</a></dd>
+                
+			</dl>
+			<dl>
+				<dt>辅助栏目</dt>
+				<dd><i>·</i><a href="">合作伙伴</a></dd>
+				<dd><i>·</i><a href="http://absen.hotjob.cn/wt/absen/web/index/social" target="_blank" rel="nofollow" >加入我们</a></dd>
+				<dd><i>·</i><a href="">行业客户</a></dd>
+			</dl>
+		</section>
+		<section class="foot_deputy">
+        <i class="x"></i>
+			<div class="deputy clear">
+				<article class="deputy_fl">
+					<aside><a href="/list-77.html">· 联系我们</a><a href="">· LED显示屏</a><a href="/list-94.html">· 人才招聘</a><a href="">· 法律声明</a></aside>
+					<p>(c)2001-2018 深圳市艾比森光电股份有限公司  <a href="http://www.miitbeian.gov.cn" target="_blank" style="color:#FFF">粤ICP备06086683号</a><a target="_blank " href="http://szcert.ebs.org.cn/d317405e-7932-4582-b17e-0bd322112605">
+                <img src="http://www.absen.cn/hdv/c_08.jpg">
+            </a>  
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+				</article>
+				<article class="deputy_rl">
+					<aside>+ 关注艾比森</aside>
+					<summary>
+						<a class="wx" href="javascript:;"><b><img src="/templets/default/img/abs_wx.jpg">艾比森官方微信</b></a><a class="wb" href="http://weibo.com/szabsen" target="_blank"></a><a class="qq" href="http://i.youku.com/szabsen" target="_blank"></a>
+					</summary>
+				</article>
+			</div>
+		</section>
+	</footer> 
+</body>
+</html>
