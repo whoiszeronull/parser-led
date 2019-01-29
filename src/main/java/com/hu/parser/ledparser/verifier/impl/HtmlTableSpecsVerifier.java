@@ -24,6 +24,7 @@ import com.hu.parser.ledparser.verifier.Verifier;
  * @author shunn
  *
  */
+@Deprecated
 public class HtmlTableSpecsVerifier implements Verifier {
 	
 	private int specCountLimit = 5;
@@ -31,27 +32,27 @@ public class HtmlTableSpecsVerifier implements Verifier {
 	@Override
 	public boolean verifiy(String content) {
 		
-		//clean the string contet, to avoid the XSS attack
-		String html = Jsoup.clean(content, new Whitelist());
+		System.out.println("HtmlTableSpecsVerifier.verifiy()");
 		
-		Document doc = Jsoup.parse(html);
+		//clean the string contet, to avoid the XSS attack
+//		String html = Jsoup.clean(content, new Whitelist());
+		Document doc = Jsoup.parse(content);
 		Elements tables = doc.getElementsByTag("table");
 		for (Element t : tables) {
 			String tableHtml = t.html();
-			
 			//verify the selcted table containing more than 5 specs or not.
 			if(verifyOneTable(tableHtml)) {
 				return true;
 			}
 		}
-		
-		
 		return false;
 	}
 
-	private boolean verifyOneTable(String tableHtml) {
+	private boolean verifyOneTable(String html) {
 		//the actual spec count that found in this tablehtml fragment.
 		int specCount = 0;
+		
+		String tableHtml = html.toUpperCase();
 		
 		Map<String, String> specMap = ParserConfig.getSpecMap();
 		Collection<String> searchKeyWords = specMap.values();
@@ -63,7 +64,11 @@ public class HtmlTableSpecsVerifier implements Verifier {
 				specKeyWords = specKeyWords.replace("，",  ",");
 				String[] specKeyWordArray = specKeyWords.split(",");
 				for(int i=0; i< specKeyWordArray.length; i++) {
-					if(tableHtml.contains(specKeyWordArray[i])) {
+					if(tableHtml.contains(specKeyWordArray[i].trim().toUpperCase())) {
+						
+						//测试用
+						System.out.print(specKeyWordArray[i].trim() + " ");
+						
 						specCount++;
 						break;
 					}

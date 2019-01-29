@@ -5,7 +5,8 @@
 	<!-- The specifications of the product -->
 	<specs type="com.hu.parser.ledparser.vo.LedPanel">
 		<spec name="pitch" required="true">
-		<!-- the search ke words are separated by english comma ",", not the chinese comma “，” , so please beware -->
+			<!-- the search ke words are separated by english comma ",", not the chinese 
+				comma “，” , so please beware -->
 			<search-key-word>pitch, 间距, 点间距</search-key-word>
 		</spec>
 		<spec name="model">
@@ -18,8 +19,9 @@
 			<search-key-word>refresh rate, 刷新, 刷新率</search-key-word>
 		</spec>
 		<spec name="pixelComposition">
-			<search-key-word></search-key-word>
-		</spec>  
+			<search-key-word>led composition, 像素结构, pixel configuration,像素配置
+			</search-key-word>
+		</spec>
 		<spec name="panelDimension">
 			<search-key-word>panel dimension, 箱体尺寸</search-key-word>
 		</spec>
@@ -30,13 +32,13 @@
 			<search-key-word>horizontal viewing angle, 水平视角</search-key-word>
 		</spec>
 		<spec name="panelWeight">
-			<search-key-word>panel weight, 箱体重量</search-key-word>
+			<search-key-word>panel weight, 箱体重量, cabinet weight</search-key-word>
 		</spec>
 		<spec name="application">
-			<search-key-word>application, 用途</search-key-word>
+			<search-key-word>application, 用途, 应用环境</search-key-word>
 		</spec>
 		<spec name="ipRating">
-			<search-key-word>IP, </search-key-word>
+			<search-key-word>IP, ip rating, 防水等级</search-key-word>
 		</spec>
 		<spec name="grayScale">
 			<search-key-word>gray scale, 灰度</search-key-word>
@@ -51,8 +53,12 @@
 			<search-key-word>panel resolution, 箱体分辨率</search-key-word>
 		</spec>
 		<spec name="tileWeight">
-			<search-key-word></search-key-word>
+			<search-key-word>tile weight, 模组重量</search-key-word>
 		</spec>
+			<spec name="tileDimension">
+			<search-key-word>模组尺寸,</search-key-word>
+		</spec>
+	
 		<spec name="tileWResolution">
 			<search-key-word></search-key-word>
 		</spec>
@@ -89,12 +95,25 @@
 		<spec name="operatingRH">
 			<search-key-word></search-key-word>
 		</spec>
+		<spec name="scanRatio">
+			<search-key-word>scan ratio, driving method, 扫描</search-key-word>
+		</spec>
+
+		<spec name="powerConsumption">
+			<search-key-word>power consumption, 功耗</search-key-word>
+		</spec>
+
+		<spec name="pixelDensity">
+			<search-key-word>pixel density, 像素密度</search-key-word>
+		</spec>
+
 	</specs>
 
 	<!-- The vertfiers to determin the content(string) having required product 
 		information or not. This is more like verifier chain that will run thru all 
 		the verifiers -->
 	<verifiers>
-		<verifier type="com.hu.parser.ledparser.verifier.impl.HtmlTableSpecsVerifier"></verifier>
+		<verifier
+			type="com.hu.parser.ledparser.verifier.impl.HtmlTableSpecsVerifier"></verifier>
 	</verifiers>
 </configuration>
