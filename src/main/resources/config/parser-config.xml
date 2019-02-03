@@ -114,6 +114,6 @@
 		the verifiers -->
 	<verifiers>
 		<verifier
-			type="com.hu.parser.ledparser.verifier.impl.HtmlTableSpecsVerifier"></verifier>
+			type="com.hu.parser.ledparser.verifier.impl.TextVerifier"></verifier>
 	</verifiers>
 </configuration>
